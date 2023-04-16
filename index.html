@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+<body>
+   <nav id="nav-bar">
+      <span><a href="#">Developer</a></span>
+      <ul>
+         <li>
+            <a href="#">Home</a>
+         </li>
+         <li>
+            <a href="#features">Features</a>
+         </li>
+         <li>
+            <a href="#about-me">About Me</a>
+         </li>
+         <li>
+            <a href="#contacts">Contacts</a>
+         </li>
+      </ul>
+   </nav>
+   <section id="body">
+      <span>
+         <h1>Hello There!</h1>
+         <h2 class="text-generator"></h2>
+         <button>Enjoy!</button>
+      </span>
+      <img src="bg1.jpg" alt="">
+   </section>
+   <section id="features">
+      <div class="features-header"> <h1>My Skills</h1></div>
+      <div class="features-skills"> 
+         <div>
+            <img src="html.png" alt="">
+            <p>Hyper Text MarkUp Language</p>
+         </div>
+         <div>
+            <img src="css.png" alt="">
+            <p>Cascading Style Sheets.</p>
+         </div>
+         <div>
+            <img src="js.png" alt="">
+            <p>Javascript</p>
+         </div>
+         <div>
+            <img src="mysql.png" alt="">
+            <p>Mysql Database</p>
+         </div>
+         <div>
+            <img src="python.jpg" alt="">
+            <p>Python</p>
+         </div>
+         <div>
+            <img src="php.png" alt="">
+            <p>PHP</p>
+         </div>
+         <div>
+            <img src="laravel.png" alt="">
+            <p>Laravel</p>
+         </div>
+         <div>
+            <img src="bootstrap.png" alt="">
+            <p>Bootstrap</p>
+         </div>
+      </div>
+   </section>
+
+   <section id="about-me">
+      <div class="about-me-header">
+         <h1>About Me</h1>
+      </div>
+      <div class="about-me-body">
+         <div>
+            <img src="p1.jpg" alt="">
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius enim rem molestias provident, iure distinctio ut adipisci hic alias voluptatibus?</span>
+         </div>
+         <div>
+            <img src="p2.jpg" alt="">
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius enim rem molestias provident, iure distinctio ut adipisci hic alias voluptatibus?</span>
+         </div>
+         <div>
+            <img src="p1.jpg" alt="">
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius enim rem molestias provident, iure distinctio ut adipisci hic alias voluptatibus?</span>
+         </div>
+      </div>
+      <div class="pop-up-image">
+         <span>&times;</span>
+            <div><img src="p1.jpg"></div>
+      </div>
+   </section>
+
+   <section id="contacts">
+         <div class="contacts-header">
+            <h1>Contacts</h1>
+         </div>
+         <div class="contact-body">
+           <div class="contact-message">
+               <div class="form">
+                  <form  onsubmit="sendEmail();reset();return false;">
+                     <label for="name">Name: </label>
+                     <input type="text" name="name" id="name"><br>
+                     <label for="mobile">Mobile: </label>
+                     <input type="tel" name="mobile" id="mobile"><br>
+                     <label for="email">Email: </label>
+                     <input type="email" name="email" id="email"><br>
+                     <label for="text-area">Message: </label><br>
+                     <textarea name="text-area" id="text-area" cols="30" rows="10"></textarea><br>
+                     <button onclick="myFunction()">Send</button>
+                  </form>
+               </div>
+               <div class="text">
+                  <h1>Send me a Message</h1>
+               </div>
+           </div>
+           <div class="contact-details">
+               <div class="left">
+                  <span>
+                     <h2>Details</h2>
+                     <p><strong>Address:</strong>&nbsp; Surallah, South Cotabato</p>
+                     <p><strong>Phone#:</strong>&nbsp; 09551486794</p> 
+                     <p><strong>Hours:</strong>&nbsp; 08:00,Mon-Sun</p>
+                  </span>   
+               </div>
+               <div class="right">
+                  <span>
+                     <h2>Social Media Platforms</h2>
+                     <a href="https://www.facebook.com/laurence.parcon.15" target="_blank"><i class="fa fa-facebook-f"></i>   www.facebook.com/laurence.parcon.15</a>
+                     <a href=https://twitter.com/Laurenceparcon target="_blank"><i class="fa fa-twitter"></i>twitter.com/Laurenceparcon</a>
+                     <a href="https://www.instagram.com/popcorn_senpai/" target="_blank"><i class="fa fa-instagram"></i>www.instagram.com/popcorn_senpai</a>
+                  </span>
+               </div>
+           </div>
+         </div>
+   </section>
+   <footer>
+      <span> Copyright &copy; 2023 Laurence Rubino Parcon &#8482;</span>
+  </footer>
+
+<script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+<script>
+    var typed = new Typed(".text-generator", {
+  strings: ["I am Laurence.","Im a Web Developer.","A Fullstack Web Developer."],
+  typeSpeed: 130,
+  backSpeed:110,
+  loop:true
+
+});
+</script> 
+<script>
+   document.querySelectorAll('#about-me img').forEach(image =>{
+       image.onclick = () =>{
+           document.querySelector('.pop-up-image').style.display='block';
+           document.querySelector('.pop-up-image img').src = image.getAttribute('src');
+       }
+   });
+
+   document.querySelector('.pop-up-image span').onclick = () =>{
+       document.querySelector('.pop-up-image').style.display='none';  
+   }
+</script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script>
+   const options = {
+      bottom: '64px', // default: '32px'
+      right: 'unset', // default: '32px'
+      right: '32px', // default: 'unset'
+      time: '0.5s', // default: '0.3s'
+      mixColor: '#fff', // default: '#fff'
+      backgroundColor: '#fff',  // default: '#fff'
+      buttonColorDark: '#100f2c',  // default: '#100f2c'
+      buttonColorLight: '#fff', // default: '#fff'
+      saveInCookies: false, // default: true,
+      label: '🌓', // default: ''
+      autoMatchOsTheme: true // default: true
+    }
+    
+    const darkmode = new Darkmode(options);
+    darkmode.showWidget();
+</script>
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.elasticemail.com",
+                Username : "bokuwakamida2019@gmail.com",
+                Password : "D304E09AB045D388A894F29F8A899875ED64",
+                To : 'laurenceparcon2020@gmail.com',
+                From : 'bokuwakamida2019@gmail.com',
+                Subject : "Send Us A Message",
+                Body : "Name: " + document.getElementById("name").value
+                     +"<br> Mobile: " +  document.getElementById("mobile").value
+                     +"<br> Email: " +  document.getElementById("email").value
+                     +"<br> Message: " +  document.getElementById("text-area").value
+            }).then(
+                function myFunction(){
+                    swal({
+                        title: "Sent",
+                        text: "You Successfully Send Your Email to Us",
+                        icon: "success",
+                        button: "Done",
+                      });
+                      
+                }
+            );
+        }
+    </script>
+</body>
+</html>
